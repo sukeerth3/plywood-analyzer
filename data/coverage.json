@@ -1,0 +1,1202 @@
+[
+  {
+    "function": "validate_dimensions",
+    "block_id": "validate_dimensions::bb0",
+    "line_start": 32,
+    "line_end": 32,
+    "hit_count": 252,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "validate_dimensions",
+    "block_id": "validate_dimensions::bb1",
+    "line_start": 33,
+    "line_end": 33,
+    "hit_count": 252,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "validate_dimensions",
+    "block_id": "validate_dimensions::bb2",
+    "line_start": 34,
+    "line_end": 34,
+    "hit_count": 12,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "validate_dimensions",
+    "block_id": "validate_dimensions::bb3",
+    "line_start": 35,
+    "line_end": 35,
+    "hit_count": 12,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "validate_dimensions",
+    "block_id": "validate_dimensions::bb4",
+    "line_start": 37,
+    "line_end": 37,
+    "hit_count": 240,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "validate_dimensions",
+    "block_id": "validate_dimensions::bb5",
+    "line_start": 38,
+    "line_end": 38,
+    "hit_count": 20,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "validate_dimensions",
+    "block_id": "validate_dimensions::bb6",
+    "line_start": 39,
+    "line_end": 39,
+    "hit_count": 20,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "validate_dimensions",
+    "block_id": "validate_dimensions::bb7",
+    "line_start": 41,
+    "line_end": 41,
+    "hit_count": 220,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "validate_dimensions",
+    "block_id": "validate_dimensions::bb8",
+    "line_start": 42,
+    "line_end": 42,
+    "hit_count": 252,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "get_input",
+    "block_id": "get_input::bb0",
+    "line_start": 44,
+    "line_end": 44,
+    "hit_count": 40,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "get_input",
+    "block_id": "get_input::bb1",
+    "line_start": 45,
+    "line_end": 45,
+    "hit_count": 40,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "get_input",
+    "block_id": "get_input::bb2",
+    "line_start": 46,
+    "line_end": 46,
+    "hit_count": 40,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "get_input",
+    "block_id": "get_input::bb3",
+    "line_start": 47,
+    "line_end": 47,
+    "hit_count": 4,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "get_input",
+    "block_id": "get_input::bb4",
+    "line_start": 48,
+    "line_end": 48,
+    "hit_count": 4,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "get_input",
+    "block_id": "get_input::bb5",
+    "line_start": 51,
+    "line_end": 51,
+    "hit_count": 36,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "get_input",
+    "block_id": "get_input::bb6",
+    "line_start": 52,
+    "line_end": 52,
+    "hit_count": 36,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "get_input",
+    "block_id": "get_input::bb7",
+    "line_start": 53,
+    "line_end": 53,
+    "hit_count": 4,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "get_input",
+    "block_id": "get_input::bb8",
+    "line_start": 54,
+    "line_end": 54,
+    "hit_count": 4,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "get_input",
+    "block_id": "get_input::bb9",
+    "line_start": 57,
+    "line_end": 57,
+    "hit_count": 32,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "get_input",
+    "block_id": "get_input::bb10",
+    "line_start": 58,
+    "line_end": 58,
+    "hit_count": 32,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "get_input",
+    "block_id": "get_input::bb11",
+    "line_start": 59,
+    "line_end": 59,
+    "hit_count": 4,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "get_input",
+    "block_id": "get_input::bb12",
+    "line_start": 60,
+    "line_end": 60,
+    "hit_count": 4,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "get_input",
+    "block_id": "get_input::bb13",
+    "line_start": 63,
+    "line_end": 63,
+    "hit_count": 28,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "get_input",
+    "block_id": "get_input::bb14",
+    "line_start": 64,
+    "line_end": 64,
+    "hit_count": 28,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "get_input",
+    "block_id": "get_input::bb15",
+    "line_start": 65,
+    "line_end": 65,
+    "hit_count": 4,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "get_input",
+    "block_id": "get_input::bb16",
+    "line_start": 66,
+    "line_end": 66,
+    "hit_count": 4,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "get_input",
+    "block_id": "get_input::bb17",
+    "line_start": 69,
+    "line_end": 69,
+    "hit_count": 24,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "get_input",
+    "block_id": "get_input::bb18",
+    "line_start": 70,
+    "line_end": 70,
+    "hit_count": 12,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "get_input",
+    "block_id": "get_input::bb19",
+    "line_start": 72,
+    "line_end": 72,
+    "hit_count": 12,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "get_input",
+    "block_id": "get_input::bb20",
+    "line_start": 73,
+    "line_end": 73,
+    "hit_count": 40,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "calculate_cuts",
+    "block_id": "calculate_cuts::bb0",
+    "line_start": 75,
+    "line_end": 75,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "calculate_cuts",
+    "block_id": "calculate_cuts::bb1",
+    "line_start": 77,
+    "line_end": 77,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "calculate_cuts",
+    "block_id": "calculate_cuts::bb2",
+    "line_start": 80,
+    "line_end": 80,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "calculate_cuts",
+    "block_id": "calculate_cuts::bb3",
+    "line_start": 81,
+    "line_end": 81,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "calculate_cuts",
+    "block_id": "calculate_cuts::bb4",
+    "line_start": 82,
+    "line_end": 82,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "calculate_cuts",
+    "block_id": "calculate_cuts::bb5",
+    "line_start": 85,
+    "line_end": 85,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "calculate_cuts",
+    "block_id": "calculate_cuts::bb6",
+    "line_start": 86,
+    "line_end": 86,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "calculate_cuts",
+    "block_id": "calculate_cuts::bb7",
+    "line_start": 87,
+    "line_end": 87,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "calculate_cuts",
+    "block_id": "calculate_cuts::bb8",
+    "line_start": 89,
+    "line_end": 89,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "calculate_cuts",
+    "block_id": "calculate_cuts::bb9",
+    "line_start": 90,
+    "line_end": 90,
+    "hit_count": 104,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "calculate_cuts",
+    "block_id": "calculate_cuts::bb10",
+    "line_start": 91,
+    "line_end": 91,
+    "hit_count": 104,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "calculate_cuts",
+    "block_id": "calculate_cuts::bb11",
+    "line_start": 92,
+    "line_end": 92,
+    "hit_count": 104,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "calculate_cuts",
+    "block_id": "calculate_cuts::bb12",
+    "line_start": 93,
+    "line_end": 93,
+    "hit_count": 104,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "calculate_cuts",
+    "block_id": "calculate_cuts::bb13",
+    "line_start": 94,
+    "line_end": 94,
+    "hit_count": 104,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "calculate_cuts",
+    "block_id": "calculate_cuts::bb14",
+    "line_start": 95,
+    "line_end": 95,
+    "hit_count": 4,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "calculate_cuts",
+    "block_id": "calculate_cuts::bb15",
+    "line_start": 96,
+    "line_end": 96,
+    "hit_count": 4,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "calculate_cuts",
+    "block_id": "calculate_cuts::bb16",
+    "line_start": 97,
+    "line_end": 97,
+    "hit_count": 4,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "calculate_cuts",
+    "block_id": "calculate_cuts::bb17",
+    "line_start": 98,
+    "line_end": 98,
+    "hit_count": 4,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "calculate_cuts",
+    "block_id": "calculate_cuts::bb18",
+    "line_start": 101,
+    "line_end": 101,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "print_result",
+    "block_id": "print_result::bb0",
+    "line_start": 104,
+    "line_end": 104,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "print_result",
+    "block_id": "print_result::bb1",
+    "line_start": 105,
+    "line_end": 105,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "print_result",
+    "block_id": "print_result::bb2",
+    "line_start": 106,
+    "line_end": 106,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "print_result",
+    "block_id": "print_result::bb3",
+    "line_start": 107,
+    "line_end": 107,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "print_result",
+    "block_id": "print_result::bb4",
+    "line_start": 108,
+    "line_end": 108,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "print_result",
+    "block_id": "print_result::bb5",
+    "line_start": 109,
+    "line_end": 109,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "print_result",
+    "block_id": "print_result::bb6",
+    "line_start": 110,
+    "line_end": 110,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "print_result",
+    "block_id": "print_result::bb7",
+    "line_start": 111,
+    "line_end": 111,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "print_result",
+    "block_id": "print_result::bb8",
+    "line_start": 113,
+    "line_end": 113,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "print_result",
+    "block_id": "print_result::bb9",
+    "line_start": 114,
+    "line_end": 114,
+    "hit_count": 64,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "print_result",
+    "block_id": "print_result::bb10",
+    "line_start": 115,
+    "line_end": 115,
+    "hit_count": 64,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "print_result",
+    "block_id": "print_result::bb11",
+    "line_start": 116,
+    "line_end": 116,
+    "hit_count": 64,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "print_result",
+    "block_id": "print_result::bb12",
+    "line_start": 117,
+    "line_end": 117,
+    "hit_count": 64,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "print_result",
+    "block_id": "print_result::bb13",
+    "line_start": 118,
+    "line_end": 118,
+    "hit_count": 64,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "print_result",
+    "block_id": "print_result::bb14",
+    "line_start": 120,
+    "line_end": 120,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "print_result",
+    "block_id": "print_result::bb15",
+    "line_start": 121,
+    "line_end": 121,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "print_result",
+    "block_id": "print_result::bb16",
+    "line_start": 122,
+    "line_end": 122,
+    "hit_count": 4,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "print_result",
+    "block_id": "print_result::bb17",
+    "line_start": 123,
+    "line_end": 123,
+    "hit_count": 4,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "print_result",
+    "block_id": "print_result::bb18",
+    "line_start": 124,
+    "line_end": 124,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "print_result",
+    "block_id": "print_result::bb19",
+    "line_start": 127,
+    "line_end": 127,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "print_result",
+    "block_id": "print_result::bb20",
+    "line_start": 128,
+    "line_end": 128,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "print_result",
+    "block_id": "print_result::bb21",
+    "line_start": 129,
+    "line_end": 129,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "print_result",
+    "block_id": "print_result::bb22",
+    "line_start": 130,
+    "line_end": 130,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "print_result",
+    "block_id": "print_result::bb23",
+    "line_start": 132,
+    "line_end": 132,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "print_result",
+    "block_id": "print_result::bb24",
+    "line_start": 133,
+    "line_end": 133,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb0",
+    "line_start": 135,
+    "line_end": 135,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb1",
+    "line_start": 136,
+    "line_end": 136,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb2",
+    "line_start": 138,
+    "line_end": 138,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb3",
+    "line_start": 139,
+    "line_end": 139,
+    "hit_count": 8,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb4",
+    "line_start": 140,
+    "line_end": 140,
+    "hit_count": 8,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb5",
+    "line_start": 143,
+    "line_end": 143,
+    "hit_count": 100,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb6",
+    "line_start": 144,
+    "line_end": 144,
+    "hit_count": 100,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb7",
+    "line_start": 147,
+    "line_end": 147,
+    "hit_count": 100,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb8",
+    "line_start": 148,
+    "line_end": 148,
+    "hit_count": 100,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb9",
+    "line_start": 149,
+    "line_end": 149,
+    "hit_count": 100,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb10",
+    "line_start": 151,
+    "line_end": 151,
+    "hit_count": 100,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb11",
+    "line_start": 152,
+    "line_end": 152,
+    "hit_count": 40,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb12",
+    "line_start": 153,
+    "line_end": 153,
+    "hit_count": 40,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb13",
+    "line_start": 154,
+    "line_end": 154,
+    "hit_count": 40,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb14",
+    "line_start": 155,
+    "line_end": 155,
+    "hit_count": 100,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb15",
+    "line_start": 156,
+    "line_end": 156,
+    "hit_count": 64,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb16",
+    "line_start": 157,
+    "line_end": 157,
+    "hit_count": 64,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb17",
+    "line_start": 158,
+    "line_end": 158,
+    "hit_count": 64,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb18",
+    "line_start": 161,
+    "line_end": 161,
+    "hit_count": 100,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb19",
+    "line_start": 162,
+    "line_end": 162,
+    "hit_count": 100,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb20",
+    "line_start": 163,
+    "line_end": 163,
+    "hit_count": 0,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb21",
+    "line_start": 164,
+    "line_end": 164,
+    "hit_count": 0,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb22",
+    "line_start": 168,
+    "line_end": 168,
+    "hit_count": 100,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb23",
+    "line_start": 171,
+    "line_end": 171,
+    "hit_count": 100,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb24",
+    "line_start": 172,
+    "line_end": 172,
+    "hit_count": 40804,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb25",
+    "line_start": 173,
+    "line_end": 173,
+    "hit_count": 400049688,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb26",
+    "line_start": 174,
+    "line_end": 174,
+    "hit_count": 400008984,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb27",
+    "line_start": 175,
+    "line_end": 175,
+    "hit_count": 400008984,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb28",
+    "line_start": 176,
+    "line_end": 176,
+    "hit_count": 400008984,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb29",
+    "line_start": 177,
+    "line_end": 177,
+    "hit_count": 400008984,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb30",
+    "line_start": 179,
+    "line_end": 179,
+    "hit_count": 400008984,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb31",
+    "line_start": 180,
+    "line_end": 180,
+    "hit_count": 400008984,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb32",
+    "line_start": 182,
+    "line_end": 182,
+    "hit_count": 400008984,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb33",
+    "line_start": 183,
+    "line_end": 183,
+    "hit_count": 400008984,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb34",
+    "line_start": 185,
+    "line_end": 185,
+    "hit_count": 401626708,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb35",
+    "line_start": 186,
+    "line_end": 186,
+    "hit_count": 1781712,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb36",
+    "line_start": 188,
+    "line_end": 188,
+    "hit_count": 163988,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb37",
+    "line_start": 189,
+    "line_end": 189,
+    "hit_count": 62120,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb38",
+    "line_start": 190,
+    "line_end": 190,
+    "hit_count": 62120,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb39",
+    "line_start": 191,
+    "line_end": 191,
+    "hit_count": 101868,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb40",
+    "line_start": 193,
+    "line_end": 193,
+    "hit_count": 163988,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb41",
+    "line_start": 194,
+    "line_end": 194,
+    "hit_count": 1617724,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb42",
+    "line_start": 195,
+    "line_end": 195,
+    "hit_count": 400008984,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb43",
+    "line_start": 196,
+    "line_end": 196,
+    "hit_count": 40704,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb44",
+    "line_start": 199,
+    "line_end": 199,
+    "hit_count": 100,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb45",
+    "line_start": 200,
+    "line_end": 200,
+    "hit_count": 4768,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb46",
+    "line_start": 201,
+    "line_end": 201,
+    "hit_count": 100,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb47",
+    "line_start": 204,
+    "line_end": 204,
+    "hit_count": 2880,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb48",
+    "line_start": 205,
+    "line_end": 205,
+    "hit_count": 2780,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb49",
+    "line_start": 206,
+    "line_end": 206,
+    "hit_count": 171148,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb50",
+    "line_start": 207,
+    "line_end": 207,
+    "hit_count": 168368,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb51",
+    "line_start": 208,
+    "line_end": 208,
+    "hit_count": 168368,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb52",
+    "line_start": 209,
+    "line_end": 209,
+    "hit_count": 2780,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb53",
+    "line_start": 210,
+    "line_end": 210,
+    "hit_count": 2780,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb54",
+    "line_start": 213,
+    "line_end": 213,
+    "hit_count": 100,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb55",
+    "line_start": 214,
+    "line_end": 214,
+    "hit_count": 4768,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb56",
+    "line_start": 215,
+    "line_end": 215,
+    "hit_count": 100,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb57",
+    "line_start": 217,
+    "line_end": 217,
+    "hit_count": 100,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "render_visualization",
+    "block_id": "render_visualization::bb58",
+    "line_start": 218,
+    "line_end": 218,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "main",
+    "block_id": "main::bb0",
+    "line_start": 220,
+    "line_end": 220,
+    "hit_count": 156,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "main",
+    "block_id": "main::bb1",
+    "line_start": 223,
+    "line_end": 223,
+    "hit_count": 156,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "main",
+    "block_id": "main::bb2",
+    "line_start": 225,
+    "line_end": 225,
+    "hit_count": 116,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "main",
+    "block_id": "main::bb3",
+    "line_start": 226,
+    "line_end": 226,
+    "hit_count": 116,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "main",
+    "block_id": "main::bb4",
+    "line_start": 227,
+    "line_end": 227,
+    "hit_count": 116,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "main",
+    "block_id": "main::bb5",
+    "line_start": 228,
+    "line_end": 228,
+    "hit_count": 116,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "main",
+    "block_id": "main::bb6",
+    "line_start": 230,
+    "line_end": 230,
+    "hit_count": 116,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "main",
+    "block_id": "main::bb7",
+    "line_start": 231,
+    "line_end": 231,
+    "hit_count": 100,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "main",
+    "block_id": "main::bb8",
+    "line_start": 232,
+    "line_end": 232,
+    "hit_count": 20,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "main",
+    "block_id": "main::bb9",
+    "line_start": 234,
+    "line_end": 234,
+    "hit_count": 96,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "main",
+    "block_id": "main::bb10",
+    "line_start": 236,
+    "line_end": 236,
+    "hit_count": 40,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "main",
+    "block_id": "main::bb11",
+    "line_start": 237,
+    "line_end": 237,
+    "hit_count": 28,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "main",
+    "block_id": "main::bb12",
+    "line_start": 241,
+    "line_end": 241,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "main",
+    "block_id": "main::bb13",
+    "line_start": 242,
+    "line_end": 242,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "main",
+    "block_id": "main::bb14",
+    "line_start": 243,
+    "line_end": 243,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "main",
+    "block_id": "main::bb15",
+    "line_start": 245,
+    "line_end": 245,
+    "hit_count": 108,
+    "source": "gcov_curated"
+  },
+  {
+    "function": "main",
+    "block_id": "main::bb16",
+    "line_start": 246,
+    "line_end": 246,
+    "hit_count": 156,
+    "source": "gcov_curated"
+  }
+]

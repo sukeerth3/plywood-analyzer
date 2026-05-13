@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<title>Plywood Analyzer &mdash; COM S 5130</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;500;600;700;800&display=swap">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/tokens.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/components.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/panels.css') }}">
+
+<script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body>
+
+<!-- Topbar -->
+<nav class="topbar" aria-label="Primary">
+  <div class="brand">
+    <div class="brand-icon" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M8 1 L14 4.5 L14 11.5 L8 15 L2 11.5 L2 4.5 Z" stroke="#000" stroke-width="1.5" fill="none"/>
+        <path d="M8 5 L11 6.5 L11 9.5 L8 11 L5 9.5 L5 6.5 Z" fill="#000" opacity="0.4"/>
+      </svg>
+    </div>
+    <div>
+      <div class="brand-name">Plywood Analyzer</div>
+      <div class="brand-sub">Static &amp; Dynamic Analysis</div>
+    </div>
+  </div>
+
+  <div class="nav-tabs" role="tablist" aria-label="Sections">
+    <button class="nav-tab" role="tab" aria-selected="true"  aria-controls="panel-overview" data-tab="overview" id="tab-overview">Overview</button>
+    <button class="nav-tab" role="tab" aria-selected="false" aria-controls="panel-storage"  data-tab="storage"  id="tab-storage"  tabindex="-1">Storage</button>
+    <button class="nav-tab" role="tab" aria-selected="false" aria-controls="panel-queries"  data-tab="queries"  id="tab-queries"  tabindex="-1">Live Queries</button>
+    <button class="nav-tab" role="tab" aria-selected="false" aria-controls="panel-pipeline" data-tab="pipeline" id="tab-pipeline" tabindex="-1">Pipeline</button>
+  </div>
+
+  <div class="topbar-right">COM&nbsp;S&nbsp;5130 &middot; Iowa&nbsp;State &middot; Spring&nbsp;2026</div>
+</nav>
+
+<div class="panels">
+
+  <!-- Panel 1: Overview -->
+  <section class="panel" id="panel-overview" role="tabpanel" aria-labelledby="tab-overview" aria-hidden="false">
+    <div class="overview-header">
+      <div class="overview-title-block">
+        <h1><span>Plywood</span> Analyzer</h1>
+        <p>Static &amp; Dynamic Analysis of a C++ Target</p>
+      </div>
+      <div class="overview-team">
+        <div class="names">Sukeerth Kolakaluri &middot; Likhitha Nakka &middot; Rupa Kowshika Achanta</div>
+        <div class="course">COM S 5130 &mdash; Program Analysis &middot; Iowa State University &middot; Spring 2026</div>
+      </div>
+    </div>
+
+    <div class="arch-card">
+      <div class="section-title">Analysis Pipeline Architecture</div>
+      <div class="arch-svg-wrap">
+        <svg viewBox="0 0 900 340" xmlns="http://www.w3.org/2000/svg" aria-label="Analysis pipeline architecture diagram" role="img">
+          <defs>
+            <marker id="ah"  markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0,0 L0,7 L8,3.5 Z" fill="#00c9e8" opacity="0.8"/></marker>
+            <marker id="ah3" markerWidth="8" markerHeight="8" refX="7" refY="3.5" orient="auto"><path d="M0,0 L0,7 L8,3.5 Z" fill="#22d18b" opacity="0.8"/></marker>
+          </defs>
+
+          <rect x="310" y="10" width="220" height="42" rx="9" fill="#101828" stroke="#00c9e8" stroke-width="1.5"/>
+          <text x="420" y="28" text-anchor="middle" fill="#00c9e8" font-family="JetBrains Mono,monospace" font-size="12.5" font-weight="600">plywood_calc.cpp</text>
+          <text x="420" y="44" text-anchor="middle" fill="#7882a6" font-family="Inter,sans-serif" font-size="10.5">AI-Generated C++ &middot; 247 lines</text>
+
+          <line x1="420" y1="52" x2="420" y2="88" stroke="#00c9e8" stroke-width="1.5" marker-end="url(#ah)" opacity="0.7"/>
+          <text x="430" y="75" fill="#7882a6" font-family="Inter,sans-serif" font-size="10">clang++ -emit-llvm -g</text>
+
+          <rect x="310" y="90" width="220" height="38" rx="8" fill="#101828" stroke="#263050" stroke-width="1.5"/>
+          <text x="420" y="107" text-anchor="middle" fill="#dce4f6" font-family="JetBrains Mono,monospace" font-size="12" font-weight="600">LLVM IR (.ll)</text>
+          <text x="420" y="121" text-anchor="middle" fill="#7882a6" font-family="Inter,sans-serif" font-size="10">880 instructions &middot; debug metadata</text>
+
+          <path d="M360,128 L360,158 L130,158 L130,178" stroke="#00c9e8" stroke-width="1.3" fill="none" marker-end="url(#ah)" opacity="0.6"/>
+          <path d="M420,128 L420,178" stroke="#00c9e8" stroke-width="1.3" fill="none" marker-end="url(#ah)" opacity="0.6"/>
+          <path d="M480,128 L480,158 L690,158 L690,178" stroke="#00c9e8" stroke-width="1.3" fill="none" marker-end="url(#ah)" opacity="0.6"/>
+
+          <rect x="60"  y="178" width="140" height="52" rx="8" fill="#101828" stroke="#4b8cf7" stroke-width="1.3"/>
+          <text x="130" y="196" text-anchor="middle" fill="#4b8cf7" font-family="JetBrains Mono,monospace" font-size="11.5" font-weight="600">Call Graph</text>
+          <text x="130" y="210" text-anchor="middle" fill="#7882a6" font-family="Inter,sans-serif" font-size="10">opt -dot-callgraph</text>
+          <text x="130" y="223" text-anchor="middle" fill="#424d6b" font-family="Inter,sans-serif" font-size="9.5">6 funcs &middot; 6 edges</text>
+
+          <rect x="350" y="178" width="140" height="52" rx="8" fill="#101828" stroke="#4b8cf7" stroke-width="1.3"/>
+          <text x="420" y="196" text-anchor="middle" fill="#4b8cf7" font-family="JetBrains Mono,monospace" font-size="11.5" font-weight="600">CFG</text>
+          <text x="420" y="210" text-anchor="middle" fill="#7882a6" font-family="Inter,sans-serif" font-size="10">opt -dot-cfg</text>
+          <text x="420" y="223" text-anchor="middle" fill="#424d6b" font-family="Inter,sans-serif" font-size="9.5">per-function blocks &middot; CFG edges</text>
+
+          <rect x="620" y="178" width="140" height="52" rx="8" fill="#101828" stroke="#4b8cf7" stroke-width="1.3"/>
+          <text x="690" y="196" text-anchor="middle" fill="#4b8cf7" font-family="JetBrains Mono,monospace" font-size="11.5" font-weight="600">Data Deps</text>
+          <text x="690" y="210" text-anchor="middle" fill="#7882a6" font-family="Inter,sans-serif" font-size="10">dep_extractor.py</text>
+          <text x="690" y="223" text-anchor="middle" fill="#424d6b" font-family="Inter,sans-serif" font-size="9.5">source variables &middot; debug metadata</text>
+
+          <path d="M130,230 L130,268 L300,268" stroke="#22d18b" stroke-width="1.3" fill="none" marker-end="url(#ah3)" opacity="0.6"/>
+          <path d="M420,230 L420,268 L350,268" stroke="#22d18b" stroke-width="1.3" fill="none" marker-end="url(#ah3)" opacity="0.5"/>
+          <path d="M690,230 L690,268 L500,268" stroke="#22d18b" stroke-width="1.3" fill="none" marker-end="url(#ah3)" opacity="0.6"/>
+
+          <rect x="270" y="255" width="200" height="44" rx="9" fill="#101828" stroke="#22d18b" stroke-width="1.5"/>
+          <text x="370" y="274" text-anchor="middle" fill="#22d18b" font-family="JetBrains Mono,monospace" font-size="12" font-weight="700">Neo4j Graph DB</text>
+          <text x="370" y="290" text-anchor="middle" fill="#7882a6" font-family="Inter,sans-serif" font-size="10">functions &middot; blocks &middot; variables</text>
+
+          <rect x="750" y="90" width="120" height="38" rx="8" fill="#101828" stroke="#f97316" stroke-width="1.3"/>
+          <text x="810" y="107" text-anchor="middle" fill="#f97316" font-family="JetBrains Mono,monospace" font-size="11.5" font-weight="600">AFL++ Fuzzer</text>
+          <text x="810" y="121" text-anchor="middle" fill="#7882a6" font-family="Inter,sans-serif" font-size="10">seed corpus &middot; 29 inputs</text>
+
+          <rect x="750" y="178" width="120" height="38" rx="8" fill="#101828" stroke="#f97316" stroke-width="1.3"/>
+          <text x="810" y="196" text-anchor="middle" fill="#f97316" font-family="JetBrains Mono,monospace" font-size="11.5" font-weight="600">gcov / lcov</text>
+          <text x="810" y="210" text-anchor="middle" fill="#7882a6" font-family="Inter,sans-serif" font-size="10">live line coverage</text>
+
+          <line x1="810" y1="128" x2="810" y2="178" stroke="#f97316" stroke-width="1.3" marker-end="url(#ah3)" opacity="0.6"/>
+          <line x1="810" y1="216" x2="810" y2="268" stroke="#f97316" stroke-width="1.3" marker-end="url(#ah3)" opacity="0.6"/>
+
+          <rect x="740" y="255" width="140" height="44" rx="9" fill="#101828" stroke="#f5a623" stroke-width="1.5"/>
+          <text x="810" y="274" text-anchor="middle" fill="#f5a623" font-family="JetBrains Mono,monospace" font-size="12" font-weight="700">SQLite DB</text>
+          <text x="810" y="290" text-anchor="middle" fill="#7882a6" font-family="Inter,sans-serif" font-size="10">coverage &middot; tests &middot; fuzz stats</text>
+
+          <path d="M370,299 L370,318 L490,318" stroke="#a78bfa" stroke-width="1.3" fill="none" marker-end="url(#ah3)" opacity="0.7"/>
+          <path d="M810,299 L810,318 L630,318" stroke="#a78bfa" stroke-width="1.3" fill="none" marker-end="url(#ah3)" opacity="0.7"/>
+
+          <rect x="430" y="305" width="220" height="35" rx="9" fill="#101828" stroke="#a78bfa" stroke-width="1.5"/>
+          <text x="540" y="321" text-anchor="middle" fill="#a78bfa" font-family="JetBrains Mono,monospace" font-size="12" font-weight="700">Query Engine &middot; Flask API</text>
+          <text x="540" y="334" text-anchor="middle" fill="#7882a6" font-family="Inter,sans-serif" font-size="9.5">Cypher + SQL &middot; NL extension via API</text>
+
+          <path d="M530,31 C680,31 680,55 750,109" stroke="#f97316" stroke-width="1.2" fill="none" marker-end="url(#ah3)" opacity="0.4" stroke-dasharray="4,3"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="stats-col">
+      <div class="section-title">Key Metrics</div>
+
+      <div class="stat-card">
+        <div class="stat-icon" style="background:var(--blue-dim);" aria-hidden="true">&#9881;</div>
+        <div>
+          <div class="stat-value" style="color:var(--blue);"   id="stat-functions">6</div>
+          <div class="stat-label">Functions analyzed</div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon" style="background:var(--green-dim);" aria-hidden="true">&#11041;</div>
+        <div>
+          <div class="stat-value" style="color:var(--green);"  id="stat-edges">—</div>
+          <div class="stat-label">Graph edges in Neo4j</div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon" style="background:var(--accent-dim);" aria-hidden="true">&#9678;</div>
+        <div>
+          <div class="stat-value" style="color:var(--accent);" id="stat-coverage">—</div>
+          <div class="stat-label">Line coverage (gcov)</div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon" style="background:var(--green-dim);" aria-hidden="true">&#10003;</div>
+        <div>
+          <div class="stat-value" style="color:var(--green);"  id="stat-warnings">0</div>
+          <div class="stat-label">Compiler warnings</div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon" style="background:var(--green-dim);" aria-hidden="true">&#8856;</div>
+        <div>
+          <div class="stat-value" style="color:var(--green);"  id="stat-bugs">0</div>
+          <div class="stat-label">scan-build bugs found</div>
+        </div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon" style="background:var(--yellow-dim);" aria-hidden="true">&#9654;</div>
+        <div>
+          <div class="stat-value" style="color:var(--yellow);" id="stat-tests">—</div>
+          <div class="stat-label">Test inputs executed</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Panel 2: Storage -->
+  <section class="panel" id="panel-storage" role="tabpanel" aria-labelledby="tab-storage" aria-hidden="true">
+    <div class="storage-header">
+      <h2>Query Storage Architecture</h2>
+      <p>Graph database for structural relationships &middot; Relational database for quantitative metrics &middot; Joined at query time</p>
+    </div>
+
+    <div class="schema-card">
+      <div class="section-title">Neo4j &mdash; Property Graph Schema</div>
+      <div class="neo4j-schema">
+        <div class="schema-row">
+          <div class="schema-node function">
+            <div class="node-dot nd-blue"></div>
+            <div>
+              <div class="node-name">(:Function)</div>
+              <div class="node-props">name: STRING &middot; <span data-evidence-neo4j="labels.Function">—</span> nodes</div>
+            </div>
+          </div>
+          <div style="flex:1"></div>
+          <span style="font-size:12px;color:var(--text-muted);">Node types</span>
+        </div>
+        <div class="schema-row">
+          <div class="schema-node basicblock">
+            <div class="node-dot nd-green"></div>
+            <div>
+              <div class="node-name">(:BasicBlock)</div>
+              <div class="node-props">id, function, instructions, line_count &middot; <span data-evidence-neo4j="labels.BasicBlock">—</span> nodes</div>
+            </div>
+          </div>
+        </div>
+        <div class="schema-row">
+          <div class="schema-node variable">
+            <div class="node-dot nd-orange"></div>
+            <div>
+              <div class="node-name">(:Variable)</div>
+              <div class="node-props">name: STRING, function: STRING &middot; <span data-evidence-neo4j="labels.Variable">—</span> nodes</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:8px;border-top:1px solid var(--border);padding-top:10px;">
+          <div class="section-title" style="margin-bottom:8px;">Relationships</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;">
+            <div class="schema-rel">
+              <div class="schema-node" style="padding:4px 10px;font-size:11px;border-color:var(--blue);"><span style="color:var(--blue);">Function</span></div>
+              <div class="rel-arrow"></div>
+              <div class="rel-label">CALLS</div>
+              <div class="rel-arrow"></div>
+              <div class="schema-node" style="padding:4px 10px;font-size:11px;border-color:var(--blue);"><span style="color:var(--blue);">Function</span></div>
+              <span style="font-size:10px;color:var(--text-muted);margin-left:6px;"><span data-evidence-neo4j="relationships.CALLS">—</span> edges</span>
+            </div>
+            <div class="schema-rel">
+              <div class="schema-node" style="padding:4px 10px;font-size:11px;border-color:var(--blue);"><span style="color:var(--blue);">Function</span></div>
+              <div class="rel-arrow"></div>
+              <div class="rel-label">ENTRY_BLOCK</div>
+              <div class="rel-arrow"></div>
+              <div class="schema-node" style="padding:4px 10px;font-size:11px;border-color:var(--green);"><span style="color:var(--green);">BasicBlock</span></div>
+              <span style="font-size:10px;color:var(--text-muted);margin-left:6px;"><span data-evidence-neo4j="relationships.ENTRY_BLOCK">—</span> edges</span>
+            </div>
+            <div class="schema-rel">
+              <div class="schema-node" style="padding:4px 10px;font-size:11px;border-color:var(--green);"><span style="color:var(--green);">BasicBlock</span></div>
+              <div class="rel-arrow"></div>
+              <div class="rel-label">SUCCESSOR</div>
+              <div class="rel-arrow"></div>
+              <div class="schema-node" style="padding:4px 10px;font-size:11px;border-color:var(--green);"><span style="color:var(--green);">BasicBlock</span></div>
+              <span style="font-size:10px;color:var(--text-muted);margin-left:6px;"><span data-evidence-neo4j="relationships.SUCCESSOR">—</span> edges</span>
+            </div>
+            <div class="schema-rel">
+              <div class="schema-node" style="padding:4px 10px;font-size:11px;border-color:var(--orange);"><span style="color:var(--orange);">Variable</span></div>
+              <div class="rel-arrow"></div>
+              <div class="rel-label">DEPENDS_ON</div>
+              <div class="rel-arrow"></div>
+              <div class="schema-node" style="padding:4px 10px;font-size:11px;border-color:var(--orange);"><span style="color:var(--orange);">Variable</span></div>
+              <span style="font-size:10px;color:var(--text-muted);margin-left:6px;"><span data-evidence-neo4j="relationships.DEPENDS_ON">—</span> edges</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="schema-card">
+      <div class="section-title">SQLite &mdash; Coverage &amp; Testing Schema</div>
+      <pre class="schema-ddl-wrap"><code class="schema-ddl" id="sqlite-schema-ddl">Loading SQLite schema...</code></pre>
+    </div>
+
+    <div class="evidence-grid">
+      <div class="evidence-card">
+        <div class="section-title">Sample CALLS edges</div>
+        <table class="evidence-table" aria-label="Sample CALLS edges">
+          <thead><tr><th>Caller</th><th>Callee</th></tr></thead>
+          <tbody id="evidence-calls"><tr><td colspan="2">Loading…</td></tr></tbody>
+        </table>
+      </div>
+
+      <div class="evidence-card">
+        <div class="section-title">Sample DEPENDS_ON edges</div>
+        <table class="evidence-table" aria-label="Sample DEPENDS_ON edges">
+          <thead><tr><th>From</th><th>To</th></tr></thead>
+          <tbody id="evidence-depends"><tr><td colspan="2">Loading…</td></tr></tbody>
+        </table>
+      </div>
+
+      <div class="evidence-card">
+        <div class="section-title">Uncovered coverage rows</div>
+        <table class="evidence-table" aria-label="Uncovered coverage rows">
+          <thead><tr><th>Function</th><th>Block</th><th>Line</th></tr></thead>
+          <tbody id="evidence-uncovered"><tr><td colspan="3">Loading…</td></tr></tbody>
+        </table>
+      </div>
+
+      <div class="evidence-card">
+        <div class="section-title">Coverage delta (curated vs +AFL replay)</div>
+        <div class="afl-metrics">
+          <div><span id="delta-baseline">—</span><small>curated blocks</small></div>
+          <div><span id="delta-baseline-pct">—</span><small>curated pct</small></div>
+          <div><span id="delta-replay">—</span><small>replay blocks</small></div>
+          <div><span id="delta-replay-pct">—</span><small>replay pct</small></div>
+          <div><span id="delta-replayed">—</span><small>inputs replayed</small></div>
+          <div><span id="delta-added">—</span><small>blocks added</small></div>
+        </div>
+        <p id="coverage-delta-summary" style="margin-top:12px;color:var(--text-muted);font-size:12.5px;line-height:1.55;">Loading measured replay result…</p>
+        <ul id="coverage-delta-blocks" style="margin:8px 0 0 18px;color:var(--text-muted);font-size:12px;line-height:1.45;"></ul>
+      </div>
+
+      <div class="evidence-card">
+        <div class="section-title">AFL stats</div>
+        <div class="afl-metrics">
+          <div><span id="afl-execs">—</span><small>execs</small></div>
+          <div><span id="afl-rate">—</span><small>execs/sec</small></div>
+          <div><span id="afl-paths">—</span><small>paths</small></div>
+          <div><span id="afl-crashes">—</span><small>crashes</small></div>
+        </div>
+        <details class="evidence-details">
+          <summary>How AFL relates to gcov</summary>
+          <p id="afl-replay-framing">Loading measured replay result…</p>
+        </details>
+      </div>
+    </div>
+
+    <div class="why-panel">
+      <div class="why-card">
+        <h4><span class="tag tag-green">Neo4j</span> Graph traversal</h4>
+        <p>Structural relationships &mdash; call paths, CFG reachability, dependency chains. Cypher <code style="color:var(--accent);font-family:var(--mono);">shortestPath</code> traverses dependency edges in milliseconds; SQL would need recursive CTEs.</p>
+      </div>
+      <div class="why-card">
+        <h4><span class="tag tag-yellow">SQLite</span> Quantitative metrics</h4>
+        <p>Coverage hit counts, test pass/fail rates, fuzz statistics. Aggregate queries (SUM, COUNT, GROUP BY) are SQLite's strength. No need for a graph for tabular coverage data.</p>
+      </div>
+      <div class="why-card">
+        <h4><span class="tag tag-cyan">Q3</span> Cross-database join</h4>
+        <p>Query 3 joins both: Cypher finds functions reachable from <code style="color:var(--accent);font-family:var(--mono);">main</code>, then Python queries SQLite for each function's hit counts. Best of both worlds.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Panel 3: Live Queries -->
+  <section class="panel" id="panel-queries" role="tabpanel" aria-labelledby="tab-queries" aria-hidden="true">
+    <div class="queries-header">
+      <div>
+        <h2>Live Demo Queries</h2>
+        <p>Click <strong>Run Query</strong> to execute against the live Neo4j + SQLite backend</p>
+      </div>
+      <div style="margin-left:auto;display:flex;align-items:center;gap:10px;">
+        <div class="tag tag-green" id="health-badge" aria-live="polite">&#9679; Checking…</div>
+      </div>
+    </div>
+
+    <div class="query-tabs">
+      <div class="qtabs" role="tablist" aria-label="Live query demos">
+        <button class="qtab active" id="qtab-1" role="tab" aria-selected="true" aria-controls="qcard-1" data-query-tab="1">Q1</button>
+        <button class="qtab" id="qtab-2" role="tab" aria-selected="false" aria-controls="qcard-2" data-query-tab="2" tabindex="-1">Q2</button>
+        <button class="qtab" id="qtab-3" role="tab" aria-selected="false" aria-controls="qcard-3" data-query-tab="3" tabindex="-1">Q3</button>
+      </div>
+
+      <div class="qpanels">
+      <!-- Q1 -->
+      <div class="query-card qpanel active" id="qcard-1" role="tabpanel" aria-labelledby="qtab-1" data-state="idle">
+        <div class="qcard-header">
+          <div class="qcard-badge"><div class="qcard-num" aria-hidden="true">1</div><div class="qcard-type">Call Graph &middot; Cypher</div></div>
+          <div class="qcard-question qcard-question-inline">&ldquo;Where is function
+            <select class="input query-select" id="q1-func" aria-label="Q1 function">
+              <option>calculate_cuts</option>
+            </select>
+            called?&rdquo;
+          </div>
+        </div>
+        <div class="qcard-code"><pre id="q1-code" aria-label="Cypher for Q1">-- loading…</pre></div>
+        <div class="qcard-actions">
+          <button class="btn btn-primary" data-action="run-demo" data-demo="1" id="btn-1">
+            <span class="btn-icon" aria-hidden="true">&#9654;</span> Run Query
+          </button>
+          <span class="timing-badge" id="timing-1" aria-live="polite"></span>
+        </div>
+        <div class="qcard-result" id="result-1" aria-live="polite">
+          <div class="empty">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5"/><path d="M10 16h12M16 10v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Click Run Query to execute
+          </div>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="query-card qpanel" id="qcard-2" role="tabpanel" aria-labelledby="qtab-2" data-state="idle" hidden>
+        <div class="qcard-header">
+          <div class="qcard-badge"><div class="qcard-num" aria-hidden="true">2</div><div class="qcard-type">Data Dependency &middot; Cypher</div></div>
+          <div class="qcard-question">&ldquo;Are two variables dependent?&rdquo;</div>
+          <div class="qcard-controls qcard-controls-grid">
+            <label class="query-field" id="q2-same-scope-controls">
+              <span>function scope</span>
+              <select class="input query-select" id="q2-scope" aria-label="Q2 function scope">
+                <option>render_visualization</option>
+              </select>
+            </label>
+            <label class="query-field">
+              <span>variable A</span>
+              <select class="input query-select" id="q2-var-a" aria-label="Q2 variable A">
+                <option>vis_height</option>
+              </select>
+            </label>
+            <label class="query-field">
+              <span>variable B</span>
+              <select class="input query-select" id="q2-var-b" aria-label="Q2 variable B">
+                <option>grid</option>
+              </select>
+            </label>
+          </div>
+          <label class="query-switch">
+            <input type="checkbox" id="q2-same-scope" checked>
+            <span>Same scope for both</span>
+          </label>
+          <div class="qcard-controls qcard-controls-grid" id="q2-cross-scope-controls" hidden>
+            <label class="query-field">
+              <span>A scope</span>
+              <select class="input query-select" id="q2-var-a-func" aria-label="Q2 variable A function">
+                <option>render_visualization</option>
+              </select>
+            </label>
+            <label class="query-field">
+              <span>B scope</span>
+              <select class="input query-select" id="q2-var-b-func" aria-label="Q2 variable B function">
+                <option>render_visualization</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <div class="qcard-code"><pre id="q2-code" aria-label="Cypher for Q2">-- loading…</pre></div>
+        <div class="qcard-actions">
+          <button class="btn btn-primary" data-action="run-demo" data-demo="2" id="btn-2">
+            <span class="btn-icon" aria-hidden="true">&#9654;</span> Run Query
+          </button>
+          <span class="timing-badge" id="timing-2" aria-live="polite"></span>
+        </div>
+        <div class="qcard-result" id="result-2" aria-live="polite">
+          <div class="empty">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5"/><path d="M10 16h12M16 10v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Click Run Query to execute
+          </div>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="query-card qpanel" id="qcard-3" role="tabpanel" aria-labelledby="qtab-3" data-state="idle" hidden>
+        <div class="qcard-header">
+          <div class="qcard-badge"><div class="qcard-num" aria-hidden="true">3</div><div class="qcard-type">Coverage + Reachability &middot; Cypher + SQL</div></div>
+          <div class="qcard-question">&ldquo;Which functions reachable from <span class="hl">main</span> have uncovered blocks?&rdquo;</div>
+        </div>
+        <div class="qcard-code"><pre id="q3-code" aria-label="Cypher + SQL for Q3">-- loading…</pre></div>
+        <div class="qcard-actions">
+          <button class="btn btn-primary" data-action="run-demo" data-demo="3" id="btn-3">
+            <span class="btn-icon" aria-hidden="true">&#9654;</span> Run Query
+          </button>
+          <span class="timing-badge" id="timing-3" aria-live="polite"></span>
+        </div>
+        <div class="qcard-result" id="result-3" aria-live="polite">
+          <div class="empty">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5"/><path d="M10 16h12M16 10v12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Click Run Query to execute
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+
+    <div class="nl-bar">
+      <label class="nl-label" for="nl-input">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1C3.686 1 1 3.462 1 6.5c0 1.15.37 2.22 1 3.1L1.5 13l3.4-.5A6.4 6.4 0 007 13c3.314 0 6-2.462 6-5.5S10.314 1 7 1z" stroke="currentColor" stroke-width="1.3"/></svg>
+        NL Query
+      </label>
+      <input class="input nl-input" id="nl-input" type="text" autocomplete="off"
+        placeholder='e.g. "How many functions are in the program?" (requires ANTHROPIC_API_KEY)'>
+      <button class="btn btn-ghost" id="nl-btn">Ask</button>
+    </div>
+    <div class="nl-result" id="nl-result" aria-live="polite"></div>
+  </section>
+
+  <!-- Panel 4: Pipeline -->
+  <section class="panel" id="panel-pipeline" role="tabpanel" aria-labelledby="tab-pipeline" aria-hidden="true">
+    <div class="pipeline-header">
+      <h2>Analysis Pipeline</h2>
+      <p>8-step automated pipeline from source code to queryable graph</p>
+    </div>
+
+    <div class="steps-card">
+      <div class="section-title" style="margin-bottom:12px;">Pipeline Steps</div>
+
+      <div class="step"><div class="step-connector"><div class="step-num">1</div><div class="step-line"></div></div>
+        <div class="step-body">
+          <div class="step-title">Compile</div>
+          <div class="step-cmd">cmake .. -DCMAKE_CXX_COMPILER=clang++-14<br>make plywood_calc plywood_calc_cov</div>
+          <div class="step-note">Debug build + coverage-instrumented build (--coverage)</div>
+        </div>
+      </div>
+      <div class="step"><div class="step-connector"><div class="step-num">2</div><div class="step-line"></div></div>
+        <div class="step-body">
+          <div class="step-title">Emit LLVM IR</div>
+          <div class="step-cmd">clang++-14 -S -emit-llvm -g -O0 plywood_calc.cpp</div>
+          <div class="step-note">880 instructions &middot; debug metadata preserved (-g)</div>
+        </div>
+      </div>
+      <div class="step"><div class="step-connector"><div class="step-num">3</div><div class="step-line"></div></div>
+        <div class="step-body">
+          <div class="step-title">Call Graph Extraction</div>
+          <div class="step-cmd">opt-14 -enable-new-pm=0 -dot-callgraph plywood_calc.ll</div>
+          <div class="step-note">6 user functions &middot; 6 call edges (stdlib filtered out)</div>
+        </div>
+      </div>
+      <div class="step"><div class="step-connector"><div class="step-num">4</div><div class="step-line"></div></div>
+        <div class="step-body">
+          <div class="step-title">CFG Extraction</div>
+          <div class="step-cmd">opt-14 -enable-new-pm=0 -dot-cfg plywood_calc.ll</div>
+          <div class="step-note">6 per-function DOT files &middot; CFG blocks and edges</div>
+        </div>
+      </div>
+      <div class="step"><div class="step-connector"><div class="step-num">5</div><div class="step-line"></div></div>
+        <div class="step-body">
+          <div class="step-title">Data Dependency Extraction</div>
+          <div class="step-cmd">python3 dep_extractor.py plywood_calc.ll</div>
+          <div class="step-note">Parses DILocalVariable + llvm.dbg.declare for source-level names &middot; <span data-evidence-neo4j="relationships.DEPENDS_ON">—</span> DEPENDS_ON edges</div>
+        </div>
+      </div>
+      <div class="step"><div class="step-connector"><div class="step-num">6</div><div class="step-line"></div></div>
+        <div class="step-body">
+          <div class="step-title">Clang Static Analyzer</div>
+          <div class="step-cmd">scan-build-14 clang++-14 -Wall -Wextra plywood_calc.cpp</div>
+          <div class="step-note"><span style="color:var(--green);">0 bugs found</span> &middot; 0 warnings after dead store removal</div>
+        </div>
+      </div>
+      <div class="step"><div class="step-connector"><div class="step-num">7</div><div class="step-line"></div></div>
+        <div class="step-body">
+          <div class="step-title">Test Execution + Coverage</div>
+          <div class="step-cmd">./plywood_calc_cov &lt;args&gt; &middot; bash stdin_tests.sh</div>
+          <div class="step-note">curated CLI + stdin tests &middot; llvm-cov gcov &middot; live coverage imported</div>
+        </div>
+      </div>
+      <div class="step"><div class="step-connector"><div class="step-num">8</div><div class="step-line"></div></div>
+        <div class="step-body">
+          <div class="step-title">Graph + Coverage Import</div>
+          <div class="step-cmd">python3 graph_importer.py --clear --callgraph ... --coverage ...</div>
+          <div class="step-note">Neo4j graph + SQLite coverage records refreshed from pipeline artifacts</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pipeline-right">
+      <div class="source-card">
+        <div class="source-card-header">
+          <div class="file-name">src/plywood_calc.cpp</div>
+          <div class="source-actions">
+            <label class="source-toggle">
+              <input type="checkbox" id="source-toggle-uncovered">
+              <span>Show uncovered lines</span>
+            </label>
+            <div class="file-meta" id="source-meta">Loading…</div>
+          </div>
+        </div>
+        <div class="source-body">
+          <div class="source-lines" id="source-lines">
+            <div class="src-line"><span class="src-linenum">…</span><span class="src-code" style="color:var(--text-muted);">Loading source…</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="findings-bar">
+        <div class="finding">
+          <div class="finding-title">Dead Stores Fixed</div>
+          <div class="finding-body"><span class="hi">used_length</span> &amp; <span class="hi">used_width</span> in <code style="font-family:var(--mono);font-size:12px;">print_result()</code> — computed but never used. Removed &rarr; <span class="good">0 warnings</span>.</div>
+        </div>
+        <div class="finding">
+          <div class="finding-title">get_input() Coverage</div>
+          <div class="finding-body">Interactive stdin path unreachable by CLI tests. Added <span class="hi">stdin_tests.sh</span> with piped input &rarr; coverage jumped from <span class="warn">0%</span> to <span class="good">100%</span>.</div>
+        </div>
+        <div class="finding">
+          <div class="finding-title">Debug Metadata Parsing</div>
+          <div class="finding-body">dep_extractor parsed raw SSA registers (<span class="warn">%0, %4</span>). Fixed to read <span class="hi">DILocalVariable</span> debug info &rarr; source names like <span class="good">board.length</span>.</div>
+        </div>
+        <div class="finding">
+          <div class="finding-title">Stdlib Filtering</div>
+          <div class="finding-body">Call graph leaked stdlib into Neo4j (<span class="warn">12 nodes</span> incl. printf, malloc). Added <span class="hi">_is_user_function()</span> filter &rarr; <span class="good">6 clean nodes</span>.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /.panels -->
+</body>
+</html>

@@ -1,0 +1,43 @@
+/* Design tokens. Change colors / spacing here, everywhere else refers by var. */
+:root {
+  --bg: #07090f;
+  --surface: #0c1120;
+  --card: #101828;
+  --card-hi: #141e30;
+  --border: #1b2438;
+  --border-hi: #263050;
+
+  --text: #dce4f6;
+  --text-dim: #7882a6;
+  --text-muted: #424d6b;
+
+  --accent: #00c9e8;
+  --accent-dim: rgba(0,201,232,0.10);
+  --accent-glow: rgba(0,201,232,0.22);
+
+  --green: #22d18b;
+  --green-dim: rgba(34,209,139,0.12);
+  --yellow: #f5a623;
+  --yellow-dim: rgba(245,166,35,0.12);
+  --red: #ef5252;
+  --red-dim: rgba(239,82,82,0.12);
+  --blue: #4b8cf7;
+  --blue-dim: rgba(75,140,247,0.12);
+  --orange: #f97316;
+  --purple: #a78bfa;
+
+  --mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --radius-sm: 6px;
+  --radius: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 12px;
+
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.2);
+  --shadow: 0 4px 14px rgba(0,0,0,0.35);
+  --shadow-accent: 0 4px 16px var(--accent-glow);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,728 @@
+[
+  {
+    "from": "board",
+    "to": "board.length",
+    "function": "_Z9get_inputP10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "board",
+    "to": "board.width",
+    "function": "_Z9get_inputP10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "cut",
+    "to": "cut.length",
+    "function": "_Z9get_inputP10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "cut",
+    "to": "cut.width",
+    "function": "_Z9get_inputP10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "board",
+    "to": "board.length",
+    "function": "_Z14calculate_cuts10DimensionsS_",
+    "type": "data_flow"
+  },
+  {
+    "from": "cut",
+    "to": "cut.length",
+    "function": "_Z14calculate_cuts10DimensionsS_",
+    "type": "data_flow"
+  },
+  {
+    "from": "board.length",
+    "to": "rows_normal",
+    "function": "_Z14calculate_cuts10DimensionsS_",
+    "type": "data_flow"
+  },
+  {
+    "from": "cut.length",
+    "to": "rows_normal",
+    "function": "_Z14calculate_cuts10DimensionsS_",
+    "type": "data_flow"
+  },
+  {
+    "from": "board",
+    "to": "board.width",
+    "function": "_Z14calculate_cuts10DimensionsS_",
+    "type": "data_flow"
+  },
+  {
+    "from": "cut",
+    "to": "cut.width",
+    "function": "_Z14calculate_cuts10DimensionsS_",
+    "type": "data_flow"
+  },
+  {
+    "from": "board.width",
+    "to": "cols_normal",
+    "function": "_Z14calculate_cuts10DimensionsS_",
+    "type": "data_flow"
+  },
+  {
+    "from": "cut.width",
+    "to": "cols_normal",
+    "function": "_Z14calculate_cuts10DimensionsS_",
+    "type": "data_flow"
+  },
+  {
+    "from": "rows_normal",
+    "to": "result.pieces_normal",
+    "function": "_Z14calculate_cuts10DimensionsS_",
+    "type": "data_flow"
+  },
+  {
+    "from": "cols_normal",
+    "to": "result.pieces_normal",
+    "function": "_Z14calculate_cuts10DimensionsS_",
+    "type": "data_flow"
+  },
+  {
+    "from": "result",
+    "to": "result.pieces_normal",
+    "function": "_Z14calculate_cuts10DimensionsS_",
+    "type": "data_flow"
+  },
+  {
+    "from": "board.length",
+    "to": "rows_rotated",
+    "function": "_Z14calculate_cuts10DimensionsS_",
+    "type": "data_flow"
+  },
+  {
+    "from": "cut.width",
+    "to": "rows_rotated",
+    "function": "_Z14calculate_cuts10DimensionsS_",
+    "type": "data_flow"
+  },
+  {
+    "from": "board.width",
+    "to": "cols_rotated",
+    "function": "_Z14calculate_cuts10DimensionsS_",
+    "type": "data_flow"
+  },
+  {
+    "from": "cut.length",
+    "to": "cols_rotated",
+    "function": "_Z14calculate_cuts10DimensionsS_",
+    "type": "data_flow"
+  },
+  {
+    "from": "result",
+    "to": "result.pieces_rotated",
+    "function": "_Z14calculate_cuts10DimensionsS_",
+    "type": "data_flow"
+  },
+  {
+    "from": "rows_rotated",
+    "to": "result.pieces_rotated",
+    "function": "_Z14calculate_cuts10DimensionsS_",
+    "type": "data_flow"
+  },
+  {
+    "from": "cols_rotated",
+    "to": "result.pieces_rotated",
+    "function": "_Z14calculate_cuts10DimensionsS_",
+    "type": "data_flow"
+  },
+  {
+    "from": "result.pieces_normal",
+    "to": "result.max_pieces",
+    "function": "_Z14calculate_cuts10DimensionsS_",
+    "type": "data_flow"
+  },
+  {
+    "from": "result.pieces_rotated",
+    "to": "result.max_pieces",
+    "function": "_Z14calculate_cuts10DimensionsS_",
+    "type": "data_flow"
+  },
+  {
+    "from": "result",
+    "to": "result.max_pieces",
+    "function": "_Z14calculate_cuts10DimensionsS_",
+    "type": "data_flow"
+  },
+  {
+    "from": "rows_rotated",
+    "to": "result.best_rows",
+    "function": "_Z14calculate_cuts10DimensionsS_",
+    "type": "data_flow"
+  },
+  {
+    "from": "rows_normal",
+    "to": "result.best_rows",
+    "function": "_Z14calculate_cuts10DimensionsS_",
+    "type": "data_flow"
+  },
+  {
+    "from": "result",
+    "to": "result.best_rows",
+    "function": "_Z14calculate_cuts10DimensionsS_",
+    "type": "data_flow"
+  },
+  {
+    "from": "cols_normal",
+    "to": "result.best_cols",
+    "function": "_Z14calculate_cuts10DimensionsS_",
+    "type": "data_flow"
+  },
+  {
+    "from": "result",
+    "to": "result.best_cols",
+    "function": "_Z14calculate_cuts10DimensionsS_",
+    "type": "data_flow"
+  },
+  {
+    "from": "cols_rotated",
+    "to": "result.best_cols",
+    "function": "_Z14calculate_cuts10DimensionsS_",
+    "type": "data_flow"
+  },
+  {
+    "from": "result",
+    "to": "result.rotated",
+    "function": "_Z14calculate_cuts10DimensionsS_",
+    "type": "data_flow"
+  },
+  {
+    "from": "board",
+    "to": "board.length",
+    "function": "_Z12print_result9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "board",
+    "to": "board.width",
+    "function": "_Z12print_result9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "cut",
+    "to": "cut.length",
+    "function": "_Z12print_result9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "cut",
+    "to": "cut.width",
+    "function": "_Z12print_result9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "result",
+    "to": "result.pieces_normal",
+    "function": "_Z12print_result9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "result",
+    "to": "result.pieces_rotated",
+    "function": "_Z12print_result9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "result",
+    "to": "result.max_pieces",
+    "function": "_Z12print_result9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "result",
+    "to": "result.rotated",
+    "function": "_Z12print_result9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "board.length",
+    "to": "total_area",
+    "function": "_Z12print_result9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "board.width",
+    "to": "total_area",
+    "function": "_Z12print_result9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "result.max_pieces",
+    "to": "used_area",
+    "function": "_Z12print_result9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "cut.width",
+    "to": "used_area",
+    "function": "_Z12print_result9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "cut.length",
+    "to": "used_area",
+    "function": "_Z12print_result9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "total_area",
+    "to": "waste_area",
+    "function": "_Z12print_result9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "used_area",
+    "to": "waste_area",
+    "function": "_Z12print_result9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "total_area",
+    "to": "waste_pct",
+    "function": "_Z12print_result9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "waste_area",
+    "to": "waste_pct",
+    "function": "_Z12print_result9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "result",
+    "to": "result.max_pieces",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "result",
+    "to": "result.rotated",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "cut",
+    "to": "cut.width",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "cut",
+    "to": "cut.length",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "cut.width",
+    "to": "piece_l",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "cut.length",
+    "to": "piece_l",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "cut.width",
+    "to": "piece_w",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "cut.length",
+    "to": "piece_w",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "board",
+    "to": "board.width",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "board.width",
+    "to": "vis_width",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "board",
+    "to": "board.length",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "board.length",
+    "to": "vis_height",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "board.width",
+    "to": "scale_x",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "board.length",
+    "to": "scale_y",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "vis_height",
+    "to": "grid",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "vis_width",
+    "to": "grid",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "fill",
+    "to": "grid",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "result",
+    "to": "result.best_rows",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "result",
+    "to": "result.best_cols",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "scale_y",
+    "to": "start_y",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "r",
+    "to": "start_y",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "piece_l",
+    "to": "start_y",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "scale_y",
+    "to": "end_y",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "r",
+    "to": "end_y",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "piece_l",
+    "to": "end_y",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "vis_height",
+    "to": "end_y",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "piece_w",
+    "to": "start_x",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "scale_x",
+    "to": "start_x",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "c",
+    "to": "start_x",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "piece_w",
+    "to": "end_x",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "scale_x",
+    "to": "end_x",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "c",
+    "to": "end_x",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "vis_width",
+    "to": "end_x",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "piece_count",
+    "to": "fill",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "start_y",
+    "to": "y",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "start_x",
+    "to": "x",
+    "function": "_Z20render_visualization9CutResult10DimensionsS0_",
+    "type": "data_flow"
+  },
+  {
+    "from": "argv",
+    "to": "board.length",
+    "function": "main",
+    "type": "data_flow"
+  },
+  {
+    "from": "board",
+    "to": "board.length",
+    "function": "main",
+    "type": "data_flow"
+  },
+  {
+    "from": "argv",
+    "to": "board.width",
+    "function": "main",
+    "type": "data_flow"
+  },
+  {
+    "from": "board",
+    "to": "board.width",
+    "function": "main",
+    "type": "data_flow"
+  },
+  {
+    "from": "cut",
+    "to": "cut.length",
+    "function": "main",
+    "type": "data_flow"
+  },
+  {
+    "from": "argv",
+    "to": "cut.length",
+    "function": "main",
+    "type": "data_flow"
+  },
+  {
+    "from": "cut",
+    "to": "cut.width",
+    "function": "main",
+    "type": "data_flow"
+  },
+  {
+    "from": "argv",
+    "to": "cut.width",
+    "function": "main",
+    "type": "data_flow"
+  },
+  {
+    "from": "board.length",
+    "to": "length",
+    "function": "_Z9get_inputP10DimensionsS0_",
+    "type": "cross_call",
+    "callee": "_Z19validate_dimensionsii"
+  },
+  {
+    "from": "board.width",
+    "to": "width",
+    "function": "_Z9get_inputP10DimensionsS0_",
+    "type": "cross_call",
+    "callee": "_Z19validate_dimensionsii"
+  },
+  {
+    "from": "cut.length",
+    "to": "length",
+    "function": "_Z9get_inputP10DimensionsS0_",
+    "type": "cross_call",
+    "callee": "_Z19validate_dimensionsii"
+  },
+  {
+    "from": "cut.width",
+    "to": "width",
+    "function": "_Z9get_inputP10DimensionsS0_",
+    "type": "cross_call",
+    "callee": "_Z19validate_dimensionsii"
+  },
+  {
+    "from": "board.length",
+    "to": "length",
+    "function": "main",
+    "type": "cross_call",
+    "callee": "_Z19validate_dimensionsii"
+  },
+  {
+    "from": "board.width",
+    "to": "width",
+    "function": "main",
+    "type": "cross_call",
+    "callee": "_Z19validate_dimensionsii"
+  },
+  {
+    "from": "cut.length",
+    "to": "length",
+    "function": "main",
+    "type": "cross_call",
+    "callee": "_Z19validate_dimensionsii"
+  },
+  {
+    "from": "cut.width",
+    "to": "width",
+    "function": "main",
+    "type": "cross_call",
+    "callee": "_Z19validate_dimensionsii"
+  },
+  {
+    "from": "board",
+    "to": "board",
+    "function": "main",
+    "type": "cross_call",
+    "callee": "_Z9get_inputP10DimensionsS0_"
+  },
+  {
+    "from": "cut",
+    "to": "cut",
+    "function": "main",
+    "type": "cross_call",
+    "callee": "_Z9get_inputP10DimensionsS0_"
+  },
+  {
+    "from": "board",
+    "to": "board",
+    "function": "main",
+    "type": "cross_call",
+    "callee": "_Z14calculate_cuts10DimensionsS_"
+  },
+  {
+    "from": "cut",
+    "to": "cut",
+    "function": "main",
+    "type": "cross_call",
+    "callee": "_Z14calculate_cuts10DimensionsS_"
+  },
+  {
+    "from": "result",
+    "to": "result",
+    "function": "main",
+    "type": "cross_call",
+    "callee": "_Z12print_result9CutResult10DimensionsS0_"
+  },
+  {
+    "from": "board",
+    "to": "board",
+    "function": "main",
+    "type": "cross_call",
+    "callee": "_Z12print_result9CutResult10DimensionsS0_"
+  },
+  {
+    "from": "cut",
+    "to": "cut",
+    "function": "main",
+    "type": "cross_call",
+    "callee": "_Z12print_result9CutResult10DimensionsS0_"
+  },
+  {
+    "from": "result",
+    "to": "result",
+    "function": "main",
+    "type": "cross_call",
+    "callee": "_Z20render_visualization9CutResult10DimensionsS0_"
+  },
+  {
+    "from": "board",
+    "to": "board",
+    "function": "main",
+    "type": "cross_call",
+    "callee": "_Z20render_visualization9CutResult10DimensionsS0_"
+  },
+  {
+    "from": "cut",
+    "to": "cut",
+    "function": "main",
+    "type": "cross_call",
+    "callee": "_Z20render_visualization9CutResult10DimensionsS0_"
+  },
+  {
+    "from": "board",
+    "to": "board",
+    "function": "_Z9get_inputP10DimensionsS0_",
+    "type": "cross_call",
+    "callee": "_Z14calculate_cuts10DimensionsS_"
+  },
+  {
+    "from": "cut",
+    "to": "cut",
+    "function": "_Z9get_inputP10DimensionsS0_",
+    "type": "cross_call",
+    "callee": "_Z14calculate_cuts10DimensionsS_"
+  },
+  {
+    "from": "board",
+    "to": "board",
+    "function": "_Z9get_inputP10DimensionsS0_",
+    "type": "cross_call",
+    "callee": "_Z12print_result9CutResult10DimensionsS0_"
+  },
+  {
+    "from": "cut",
+    "to": "cut",
+    "function": "_Z9get_inputP10DimensionsS0_",
+    "type": "cross_call",
+    "callee": "_Z12print_result9CutResult10DimensionsS0_"
+  },
+  {
+    "from": "board",
+    "to": "board",
+    "function": "_Z9get_inputP10DimensionsS0_",
+    "type": "cross_call",
+    "callee": "_Z20render_visualization9CutResult10DimensionsS0_"
+  },
+  {
+    "from": "cut",
+    "to": "cut",
+    "function": "_Z9get_inputP10DimensionsS0_",
+    "type": "cross_call",
+    "callee": "_Z20render_visualization9CutResult10DimensionsS0_"
+  }
+]
